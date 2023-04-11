@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "task g++",
+            "command": "D:\\C_CppWorkspace\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\coin\\${fileBasenameNoExtension}.exe",
+                "-fexec-charset=GBK",
+                "-I",
+                "D:\\C_CppWorkspace\\Code-Cpp",
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "D:\\C_CppWorkspace\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+        }
+    ]
+}
