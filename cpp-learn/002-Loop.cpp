@@ -11,20 +11,20 @@ int main()
         cout << "第" << i << "次循环"
              << "\n";
     }
-    // count = 0;
-    // while (count < n)
-    // {
-    //     cout << "第" << count << "次循环"
-    //          << "\n";
-    //     count++;
-    // }
-    // count = 0;
-    // do
-    // {
-    //     cout << "第" << count << "次循环"
-    //          << "\n";
-    //     count++;
-    // } while (count >= n);
+     count = 0;
+     while (count < n)
+     {
+         cout << "第" << count << "次循环"
+              << "\n";
+         count++;
+     }
+     count = 0;
+     do
+     {
+         cout << "第" << count << "次循环"
+              << "\n";
+         count++;
+     } while (count >= n);
 
     system("pause");
     return 0;
