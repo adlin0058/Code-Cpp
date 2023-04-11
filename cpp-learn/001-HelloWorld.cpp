@@ -1,9 +1,11 @@
-// 输出你好
+/*
+todo 第一个C++程序hello world
+*/
 #include <iostream>
 using namespace std;
 int main()
 {
-    cout << "你好" << endl;
+    cout << "Hello World!" << endl;
     system("pause");
     return 0;
 }
