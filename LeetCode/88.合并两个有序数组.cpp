@@ -10,29 +10,29 @@ class Solution
 public:
     void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
     {
-
-        int p1 = m - 1, p2 = n - 1;
-        int tail = m + n - 1;
-        int cur;
-        while (p1 >= 0 || p2 >= 0)
+        int p = m - 1;
+        int q = n - 1;
+        int total = m + n - 1;
+        int temp;
+        while (p >= 0 || q >= 0)
         {
-            if (p1 == -1)
+            if (p == -1)
             {
-                cur = nums2[p2--];
+                temp = nums2[q--];
             }
-            else if (p2 == -1)
+            else if (q == -1)
             {
-                cur = nums1[p1--];
+                temp = nums1[p--];
             }
-            else if (nums1[p1] > nums2[p2])
+            else if (nums1[p] > nums2[q])
             {
-                cur = nums1[p1--];
+                temp = nums1[p--];
             }
             else
             {
-                cur = nums2[p2--];
+                temp = nums2[q--];
             }
-            nums1[tail--] = cur;
+            nums1[total--] = temp;
         }
     }
 };
