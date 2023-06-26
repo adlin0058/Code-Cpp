@@ -12,6 +12,11 @@ int main()
     cout << "float" << sizeof(float) << endl;
     cout << "double" << sizeof(double) << endl;
 
+    // 科学计数法
+    float f2 = 3e2; // 3*10^2
+    float f3 = 5e-4;
+    cout << f2 << "\n"
+         << f3 << endl;
     system("pause");
     return 0;
 }
