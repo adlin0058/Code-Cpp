@@ -13,7 +13,9 @@ public:
     // 设置年龄
     void setAge(int age)
     {
-        m_Age = age;
+        // 有效性验证
+        if (age > 0 && age < 150)
+            m_Age = age;
     }
     // 获取姓名
     string getName()

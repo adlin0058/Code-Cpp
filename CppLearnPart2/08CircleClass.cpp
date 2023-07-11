@@ -25,7 +25,7 @@ int main()
     // 属性赋值
     c1.m_r = 10;
 
-    cout << "圆的周长为:" << c1.calculate() << endl;
+    cout << "圆的周长为:" << c1.calculate() << endl; // calculate计算
 
     system("pause");
     return 0;
