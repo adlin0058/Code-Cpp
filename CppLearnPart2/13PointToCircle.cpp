@@ -1,6 +1,8 @@
 // 点与圆的关系
 #include <iostream>
 using namespace std;
+// #include "13circle.h"
+// #include "13point.h"
 
 // 点类
 class Point
@@ -66,12 +68,40 @@ private:
 void isInCircle(Circle &c, Point &p)
 {
     // 点到圆心距离的平方
+    double distance =
+        (c.getPoint().getX() - p.getX()) * (c.getPoint().getX() - p.getX()) + (c.getPoint().getY() - p.getY()) * (c.getPoint().getY() - p.getY());
     // 半径的平方
     double R = c.getR() * c.getR();
+
+    if (distance > R)
+    {
+        cout << "点在圆外" << endl;
+    }
+    else if (distance == R)
+    {
+        cout << "点在圆上" << endl;
+    }
+    else
+    {
+        cout << "点在圆内" << endl;
+    }
 }
 int main()
 {
+    // 实例化圆类
+    Circle c;
+    c.setR(10);
+    Point center;
+    center.setX(10);
+    center.setY(0);
+    c.setPoint(center);
+    // 实例化点类
+    Point p;
+    p.setX(10);
+    p.setY(9);
 
+    // 调用判断
+    isInCircle(c, p);
     system("pause");
     return 0;
 }
